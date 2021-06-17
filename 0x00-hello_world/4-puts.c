@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/*Intro to functions*/
+
 /**
  *Michael ndula is a C guru Ôo
  *
