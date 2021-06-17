@@ -3,20 +3,25 @@
 
 ##Technologies
 
-Scripts written in Bash 4.3.11(1)\n
-C files are compiled using gcc 4.8.4\n
-C files are written according to the C90 standard\n
-Tested on Ubuntu 14.04 LTS\n
-Projects\n
-All of the following folders are projects done during the studies:\n
+Scripts written in Bash 4.3.11(1)
 
-Project name\t	Description\n
-0x00-hello_world\t	It aims to learn about what is entry point, basics commands (puts, printf, putchar), compilation process with gcc in C language\n
-0x01-variables_if_else_while\t	It aims to learn about arithmetic operators, relational operators, boolean operators, comments, declaring variables and loops in C language\n
-0x02-functions_nested_loops\t	It aims to learn about header files, functions, loops and nested loops in C language\n
-0x03-debugging\t	It aims to learn how to debug in C language\n
-0x04-more_functions_nested_loops\t	It aims to learn about nested loops in C language\n
-0x05-pointers_arrays_strings\t	It aims to learn about pointers and arrays in C language\n
+C files are compiled using gcc 4.8.4
+
+C files are written according to the C90 standard
+
+Tested on Ubuntu 14.04 LTS
+
+Projects
+
+All of the following folders are projects done during the studies:
+
+Project name	     	     	Description\n
+0x00-hello_world		It aims to learn about what is entry point, basics commands (puts, printf, putchar), compilation process with gcc in C language\n
+0x01-variables_if_else_while    It aims to learn about arithmetic operators, relational operators, boolean operators, comments, declaring variables and loops in C language\n
+0x02-functions_nested_loops     It aims to learn about header files, functions, loops and nested loops in C language\n
+0x03-debugging			It aims to learn how to debug in C language\n
+0x04-more_functions_nested_loops	It aims to learn about nested loops in C language\n
+0x05-pointers_arrays_strings    	It aims to learn about pointers and arrays in C language\n
 0x06-pointers_arrays_strings\t	It aims to learn about pointers and arrays in C language\n
 0x07-pointers_arrays_strings\t	It aims to learn about pointers and arrays in C language\n
 0x08-recursion\t	It aims to learn about recursion and how to implement it in C language\n
