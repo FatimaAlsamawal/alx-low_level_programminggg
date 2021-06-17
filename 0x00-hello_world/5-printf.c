@@ -1,14 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - Prints quote
- *
- * Return: zero on success
- *
+ *main - Intro to printf
+ *Description: very simple snippet
+ *Return: 0
  */
-
 int main(void)
 {
-  printf("with proper grammar, but the outcome is a piece of art,\n");
-  return (0);
+	printf("%s\n", "with proper grammar, but the outcome is a piece of art,");
+	return (0);
 }
