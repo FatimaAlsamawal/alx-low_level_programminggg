@@ -2,7 +2,7 @@
 
 /**
  *Michael ndula is a C guru Ôo
- *main - Intro to puts
+ *
  *printing the output using puts function
  *Return: 0
 */
