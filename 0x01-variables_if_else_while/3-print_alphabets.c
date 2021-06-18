@@ -3,7 +3,7 @@
 /**
  *main - Prints lowercase and uppercase letters using only putchar
  *
- *Description: a program that prints the alphabet in lowercase, and then in uppercase
+ *Description: Prints lowercase and uppercase letters using only putchar
  *Return: 0
 */
 int main(void)
