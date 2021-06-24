@@ -21,3 +21,4 @@
 	- We are tasked to fix the prototype function code. This is the [2-largest_number](./2-largest_number.c) prototype function code that works correctly.
 	- Compile the code this way: `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-largest_number.c 2-main.c -o 2-main`
 	
+
