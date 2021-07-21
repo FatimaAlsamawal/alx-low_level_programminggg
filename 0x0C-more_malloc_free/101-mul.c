@@ -1,124 +1,126 @@
-#include <stdio.h>
+#include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
 
 /**
- * isError - error checker
- * @argc: number of arguments
- * @argv: an array consisting arguments
+ * _is_zero - determines if any number is zero
+ * @argv: argument vector.
  *
- * Return: 0 on  succsess
+ * Return: no return.
  */
-
-int isError(int argc, char **argv)
+void _is_zero(char *argv[])
 {
-	int i, j;
+	int i, isn1 = 1, isn2 = 1;
 
-	if (argc != 3)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	for (i = 1; i < argc; i++)
-	{
-		for (j = 0; argv[i][j]; j++)
+	for (i = 0; argv[1][i]; i++)
+		if (argv[1][i] != '0')
 		{
-			if (argv[i][j] > '9' || argv[i][j] < '0')
-			{
-				printf("Error\n");
-				exit(98);
-			}
+			isn1 = 0;
+			break;
 		}
-	}
-	return (0);
-}
 
-/**
- * _strlen - returns the length of the string
- * @s: takes string
- *
- * Return: returns the length int
- */
+	for (i = 0; argv[2][i]; i++)
+		if (argv[2][i] != '0')
+		{
+			isn2 = 0;
+			break;
+		}
 
-int _strlen(char *s)
-{
-	int count;
-
-	count = 0;
-	while (*s)
-	{
-		count++;
-		s++;
-	}
-	return (count);
-}
-
-
-/**
- * _calloc - calloc() implementation
- * @nmemb: number of elements of the array
- * @size: size of a element
- *
- * Return: void
- */
-
-void *_calloc(unsigned int nmemb, unsigned int size)
-{
-	char *s;
-	unsigned int i;
-
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-	s = malloc(sizeof(char) * nmemb * size);
-	if (!s)
-		return (NULL);
-	for (i = 0; i < nmemb * size; i++)
-	{
-		s[i] = 0;
-	}
-	return (s);
-}
-
-/**
- * main - entry point
- * @argc: number of arguments
- * @argv: an array consisting arguments
- *
- * Return: 0 or 1
- */
-
-int main(int argc, char **argv)
-{
-	int len1, len2, carry, a, b, i, j;
-	int *result;
-
-	isError(argc, argv);
-	len1 = _strlen(argv[1]), len2 = _strlen(argv[2]);
-	if (argv[1][0] == 48 || argv[2][0] == 48)
+	if (isn1 == 1 || isn2 == 1)
 	{
 		printf("0\n");
-		return (0);
+		exit(0);
 	}
-	result = _calloc((len1 + len2), sizeof(int));
-	for (i = len1 - 1; i >= 0; i--)
-	{
-		carry = 0;
-		a = argv[1][i] - '0';
-		for (j = len2 - 1; j >= 0; j--)
+}
+
+/**
+ * _initialize_array - set memery to zero in a new array
+ * @ar: char array.
+ * @lar: length of the char array.
+ *
+ * Return: pointer of a char array.
+ */
+char *_initialize_array(char *ar, int lar)
+{
+	int i = 0;
+
+	for (i = 0; i < lar; i++)
+		ar[i] = '0';
+	ar[lar] = '\0';
+	return (ar);
+}
+
+/**
+ * _checknum - determines length of the number
+ * and checks if number is in base 10.
+ * @argv: arguments vector.
+ * @n: row of the array.
+ *
+ * Return: length of the number.
+ */
+int _checknum(char *argv[], int n)
+{
+	int ln;
+
+	for (ln = 0; argv[n][ln]; ln++)
+		if (!isdigit(argv[n][ln]))
 		{
-			b = argv[2][j] - '0';
-			carry += result[i + j + 1] + (a * b);
-			result[j + i + 1] = carry % 10;
-			carry /= 10;
+			printf("Error\n");
+			exit(98);
 		}
-		if (carry > 0)
-			result[i + j + 1] += carry;
-	}
-	a = result[0] == 0 ? 1 : 0;
-	for (; a < len1 + len2; a++)
+
+	return (ln);
+}
+
+/**
+ * main - Entry point.
+ * program that multiplies two positive numbers.
+ * @argc: number of arguments.
+ * @argv: arguments vector.
+ *
+ * Return: 0 - success.
+ */
+int main(int argc, char *argv[])
+{
+	int ln1, ln2, lnout, add, addl, i, j, k, ca;
+	char *nout;
+
+	if (argc != 3)
+		printf("Error\n"), exit(98);
+	ln1 = _checknum(argv, 1), ln2 = _checknum(argv, 2);
+	_is_zero(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
+	if (nout == NULL)
+		printf("Error\n"), exit(98);
+	nout = _initialize_array(nout, lnout);
+	k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
+	for (; k >= 0; k--, i--)
 	{
-		printf("%d", result[a]);
+		if (i < 0)
+		{
+			if (addl > 0)
+			{
+				add = (nout[k] - '0') + addl;
+				if (add > 9)
+					nout[k - 1] = (add / 10) + '0';
+				nout[k] = (add % 10) + '0';
+			}
+			i = ln1 - 1, j--, addl = 0, ca++, k = lnout - (1 + ca);
+		}
+		if (j < 0)
+		{
+			if (nout[0] != '0')
+				break;
+			lnout--;
+			free(nout), nout = malloc(lnout + 1), nout = _initialize_array(nout, lnout);
+			k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
+		}
+		if (j >= 0)
+		{
+			add = ((argv[1][i] - '0') * (argv[2][j] - '0')) + (nout[k] - '0') + addl;
+			addl = add / 10, nout[k] = (add % 10) + '0';
+		}
 	}
-	printf("\n");
-	free(result);
+	printf("%s\n", nout);
 	return (0);
 }
