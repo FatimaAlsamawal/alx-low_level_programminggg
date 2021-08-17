@@ -32,8 +32,8 @@ All of the following folders are projects done during the studies:
 | [`0x10-variadic_functions`](https://github.com/Michaelndula/alx-low_level_programming/tree/master/0x10-variadic_functions) | It aims to learn about variadic functions in **C language** |
 | [`0x12-singly_linked_lists`](https://github.com/Michaelndula/alx-low_level_programming/tree/master/0x12-singly_linked_lists) | It aims to learn about linked lists in **C language** |
 | [`0x13-more_singly_linked_lists`](https://github.com/Michaelndula/alx-low_level_programming/tree/master/0x13-more_singly_linked_lists) | It aims to learn about singly linked lists in **C language** |
-| [`0x14-bit_manipulation`]() | it aims to learn about how to manipulate bits and use bitwise operators in **C language** |
-| [`0x15-file_io`]() | It aims to learn about how to handle files (open, close, read and write), file descriptors, system calls and file permissions in **C language** |
+| [`0x14-bit_manipulation`](https://github.com/Michaelndula/alx-low_level_programming/tree/master/0x14-bit_manipulation) | it aims to learn about how to manipulate bits and use bitwise operators in **C language** |
+| [`0x15-file_io`](https://github.com/Michaelndula/alx-low_level_programming/tree/master/0x15-file_io) | It aims to learn about how to handle files (open, close, read and write), file descriptors, system calls and file permissions in **C language** |
 | [`0x17-doubly_linked_lists`]() | It aims to learn about doubly linked list in **C language** |
 | [`0x18-dynamic_libraries`]() | It aims to learn about dynamic and shared libraries in **C language** |
 | [`0x19-stacks_queues_lifo_fifo`]() | Submodule of **monty**, an interpreter of Monty ByteCode files written with **C language** |
