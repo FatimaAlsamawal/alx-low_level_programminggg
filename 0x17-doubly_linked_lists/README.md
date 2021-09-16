@@ -1,5 +1,7 @@
 # Doubly linked lists
 
+![](https://miro.medium.com/max/700/0*zpQ07xigMYU5WRgu.png)
+
 Project done during **Full Stack Software Engineering studies** at **ALX | Holberton School**. It aims to learn about doubly linked list in **C language**.
 
 ## Technologies
