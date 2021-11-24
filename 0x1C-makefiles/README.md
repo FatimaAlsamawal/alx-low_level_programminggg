@@ -1,5 +1,9 @@
 # Makefiles
-
+<p align="center">
+<img
+	src="https://res.cloudinary.com/practicaldev/image/fetch/s--oZclJqRB--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/0t3fdxw9v0iy0aw44fil.png"
+	alt="makefiles">
+</p>
 Project done during **Full Stack Software Engineering studies** at **ALX | Holberton School**. It aims to learn what are makefiles, when, why and how to use them (with variables, explicit and implicit rules).
 
 ## Technologies
